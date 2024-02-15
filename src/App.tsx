@@ -1,11 +1,14 @@
 import "./App.css";
-import Pizza from "./components/Pizza";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Menu from "./components/Menu";
 
 function App() {
   return (
     <div>
-      <h1 className="text-2xl font-semibold underline">Hello World</h1>
-      <Pizza />
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
