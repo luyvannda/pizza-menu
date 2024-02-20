@@ -1,9 +1,28 @@
-export default function Pizza() {
+import { FC } from "react";
+interface PizzaProps {
+  id: number;
+  name: string;
+  ingredients: string;
+  price: number;
+  photoName: string;
+  soldOut: boolean;
+}
+
+const Pizza: FC<PizzaProps> = ({
+  id,
+  name,
+  ingredients,
+  price,
+  photoName,
+  soldOut,
+}) => {
   return (
-    <div>
-      <img src="focaccia.jpg" alt="A Focaccia pizza" />
-      <h2>Focaccia</h2>
-      <p>Bread with italian olive oil and rosemary</p>
+    <div key={id}>
+      <img src={photoName} alt="A Focaccia pizza" />
+      <h3>{name}</h3>
+      <p>{ingredients}</p>
     </div>
   );
-}
+};
+
+export default Pizza;
