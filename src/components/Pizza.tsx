@@ -17,10 +17,13 @@ const Pizza: FC<PizzaProps> = ({
   soldOut,
 }) => {
   return (
-    <div key={id}>
-      <img src={photoName} alt="A Focaccia pizza" />
-      <h3>{name}</h3>
-      <p>{ingredients}</p>
+    <div key={id} className="pizza">
+      <img src={photoName} alt={name} />
+      <div>
+        <h3>{name}</h3>
+        <p>{ingredients}</p>
+        <span>${price}</span>
+      </div>
     </div>
   );
 };

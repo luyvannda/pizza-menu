@@ -10,90 +10,60 @@ html {
 
 body {
   font-family: "Roboto Mono", sans-serif;
-  color: #252525;
-  font-weight: 400;
-  background-color: #f7f2e9;
-  border-bottom: 1.6rem solid #edc84b;
-  min-height: 100vh;
-  padding: 3.2rem;
-  padding-bottom: 6rem;
 }
 
-.container {
-  max-width: 80rem;
-  margin: 0 auto;
+@layer base {
+  body {
+    @apply min-h-screen border-b-[1.6rem] border-[#edc84b] bg-[#f7f2e9] p-[3.2rem] pb-[6rem] font-mono font-normal
+    text-[#252525];
+  }
+}
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4.8rem;
+@layer components {
+  .container {
+    @apply mx-auto flex max-w-[80rem] flex-col items-center gap-[4.8rem];
+  }
 }
 
 /* *************** */
 
-.header {
-  align-self: stretch;
-}
+@layer components {
+  .header {
+    @apply self-stretch;
+  }
 
-.header h1 {
-  /* Non-accessible color */
-  color: #edc84b;
-  /* color: #af8602; */
+  .header h1 {
+    @apply relative block w-full text-center text-[5.2rem] font-light uppercase tracking-[3px] text-[#edc84b];
+  }
 
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 5.2rem;
-  font-weight: 300;
-  letter-spacing: 3px;
-  position: relative;
-  width: 100%;
-  display: block;
-}
+  .header h1::before,
+  .header h1::after {
+    @apply absolute top-[50%] block h-[3px] w-[4rem] -translate-y-[1px] bg-[#edc84b] content-none;
+  }
 
-.header h1::before,
-.header h1::after {
-  display: block;
-  content: "";
-  height: 3px;
-  width: 8rem;
-  background-color: #edc84b;
-  position: absolute;
-  top: calc(50% - 1px);
-}
+  .header h1::before {
+    left: 0;
+  }
 
-.header h1::before {
-  left: 0;
-}
-
-.header h1::after {
-  right: 0;
+  .header h1::after {
+    right: 0;
+  }
 }
 
 /* *************** */
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-}
+@layer components {
+  .menu {
+    @apply flex flex-col items-center gap-16;
+  }
 
-.menu h2 {
-  display: inline-block;
-  padding: 1rem 0;
-  border-top: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 500;
-}
+  .menu h2 {
+    @apply inline-block border-b-2 border-t-2 border-[#252525] py-4 text-[2.4rem] font-medium uppercase tracking-[3px];
+  }
 
-.menu > p {
-  font-size: 1.5rem;
-  text-align: center;
-  line-height: 1.6;
-  width: 80%;
+  .menu > p {
+    @apply w-[80%] text-center text-2xl leading-6;
+  }
 }
 
 .pizzas {
