@@ -10,13 +10,13 @@ export default function Footer() {
   const conditionMessage = (): ReactNode => {
     return isOpen ? (
       <p>
-        {new Date().toLocaleTimeString()}. We&apos;re open until {closeHour}
+        We&apos;re open until {closeHour}
         :00. Come visit us or order online.
       </p>
     ) : (
       <p>
-        {new Date().toLocaleTimeString()}. Sorry, We&apos;re currently close.
-        Please come back between {openHour}:00 - {closeHour}:00.
+        We&apos;re are happy to welcome you between {openHour}:00 - {closeHour}
+        :00.
       </p>
     );
   };
