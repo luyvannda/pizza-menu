@@ -4,10 +4,12 @@ import { pizzaData } from "../lib/data";
 
 export default function Menu() {
   return (
-    <main className="menu">
-      <h2>Our Menu</h2>
+    <main className="flex flex-col items-center gap-16">
+      <h2 className="inline-block border-b-2 border-t-2 border-[#252525] py-4 text-[2.4rem] font-medium uppercase tracking-[3px]">
+        Our Menu
+      </h2>
 
-      <ul className="pizzas">
+      <ul className="grid list-none grid-cols-2 gap-[4.8rem]">
         {pizzaData.map((pizza) => (
           <Pizza key={pizza.id} pizzaObj={pizza} />
         ))}

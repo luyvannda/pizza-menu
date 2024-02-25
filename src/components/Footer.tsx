@@ -6,7 +6,7 @@ export default function Footer() {
   console.log(isOpen);
 
   return (
-    <footer className="footer">
+    <footer className="text-[1.4rem]">
       {new Date().toLocaleTimeString()}. We&apos;re currently open
     </footer>
   );

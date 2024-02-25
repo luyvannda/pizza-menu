@@ -19,79 +19,11 @@ body {
   }
 }
 
-@layer components {
-  .container {
-    @apply mx-auto flex max-w-[80rem] flex-col items-center gap-[4.8rem];
-  }
-}
-
 /* *************** */
 
 @layer components {
-  .header {
-    @apply self-stretch;
-  }
-
-  .header h1 {
-    @apply relative block w-full text-center text-[5.2rem] font-light uppercase tracking-[3px] text-[#edc84b];
-  }
-
-  .header h1::before,
-  .header h1::after {
-    @apply absolute top-[50%] block h-[3px] w-[4rem] -translate-y-[1px] bg-[#edc84b] content-none;
-  }
-
-  .header h1::before {
-    left: 0;
-  }
-
-  .header h1::after {
-    right: 0;
-  }
-}
-
-/* *************** */
-
-@layer components {
-  .menu {
-    @apply flex flex-col items-center gap-16;
-  }
-
-  .menu h2 {
-    @apply inline-block border-b-2 border-t-2 border-[#252525] py-4 text-[2.4rem] font-medium uppercase tracking-[3px];
-  }
-
   .menu > p {
     @apply w-[80%] text-center text-2xl leading-6;
-  }
-
-  .pizzas {
-    @apply grid list-none grid-cols-2 gap-[4.8rem];
-  }
-
-  .pizza {
-    @apply flex gap-[3.2rem];
-  }
-
-  .pizza img {
-    @apply h-48 w-48 self-start object-cover object-center;
-  }
-
-  .pizza div {
-    @apply flex flex-col gap-3 py-2;
-  }
-
-  .pizza h3 {
-    @apply text-[2rem] font-normal;
-  }
-
-  .pizza p {
-    @apply mb-auto text-[1.4rem] font-light italic;
-  }
-
-  .pizza span {
-    display: block;
-    font-size: 1.6rem;
   }
 
   .pizza.sold-out {
@@ -105,10 +37,6 @@ body {
 }
 
 /* *************** */
-
-.footer {
-  font-size: 1.4rem;
-}
 
 .order {
   display: flex;
