@@ -6,13 +6,15 @@ interface PizzaProps {
     ingredients: string;
     price: number;
     photoName: string;
-    // soldOut: boolean;
+    soldOut: boolean;
   };
 }
 
 const Pizza: FC<PizzaProps> = ({
-  pizzaObj: { id, name, ingredients, price, photoName },
+  pizzaObj: { id, name, ingredients, price, photoName, soldOut },
 }) => {
+  if (soldOut) return null;
+
   return (
     <li key={id} className="flex gap-[3.2rem]">
       <img

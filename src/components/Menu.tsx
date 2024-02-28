@@ -13,11 +13,17 @@ export default function Menu() {
       </h2>
 
       {numPizzas > 0 ? (
-        <ul className="grid list-none grid-cols-2 gap-[4.8rem]">
-          {pizzas.map((pizza) => (
-            <Pizza key={pizza.id} pizzaObj={pizza} />
-          ))}
-        </ul>
+        <>
+          <p className="w-[80%] text-center text-2xl leading-6">
+            Authentic Italian cuisine. 6 creative dishes to choose from. All
+            from our stone oven, all organic, all delicious.
+          </p>
+          <ul className="grid list-none grid-cols-2 gap-[4.8rem]">
+            {pizzas.map((pizza) => (
+              <Pizza key={pizza.id} pizzaObj={pizza} />
+            ))}
+          </ul>
+        </>
       ) : (
         <p className="w-[80%] text-center text-2xl leading-6">
           We&apos;re still working on our menu. Please come back later :)

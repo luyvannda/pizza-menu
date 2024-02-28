@@ -22,10 +22,6 @@ body {
 /* *************** */
 
 @layer components {
-  .menu > p {
-    @apply w-[80%] text-center text-2xl leading-6;
-  }
-
   .pizza.sold-out {
     color: #888;
   }
