@@ -23,7 +23,7 @@ export default function Footer() {
 
   return (
     <footer className="text-[1.4rem]">
-      <div className="flex flex-col items-center gap-[2.4rem]">
+      <div className="flex flex-col items-center gap-[2.4rem] text-center md:text-left">
         {conditionMessage()}
         {isOpen && <button className="btn">Order</button>}
       </div>
