@@ -14,7 +14,10 @@ const Pizza: FC<PizzaProps> = ({
   pizzaObj: { id, name, ingredients, price, photoName, soldOut },
 }) => {
   return (
-    <li key={id} className={`flex gap-[3.2rem] ${soldOut && "text-[#888]"}`}>
+    <li
+      key={id}
+      className={`flex flex-col gap-[3.2rem] md:flex-row ${soldOut && "text-[#888]"}`}
+    >
       <img
         className={`h-48 w-48 self-start object-cover object-center ${soldOut && "opacity-80 grayscale"}`}
         src={photoName}

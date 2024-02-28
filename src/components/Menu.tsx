@@ -7,7 +7,7 @@ export default function Menu() {
   // const pizzas = [];
   const numPizzas = pizzas.length;
   return (
-    <main className="flex flex-col items-center gap-16">
+    <main className="flex flex-col items-center gap-16 overflow-x-hidden">
       <h2 className="inline-block border-b-2 border-t-2 border-[#252525] py-4 text-[2.4rem] font-medium uppercase tracking-[3px]">
         Our Menu
       </h2>
@@ -18,7 +18,7 @@ export default function Menu() {
             Authentic Italian cuisine. 6 creative dishes to choose from. All
             from our stone oven, all organic, all delicious.
           </p>
-          <ul className="grid list-none grid-cols-2 gap-[4.8rem]">
+          <ul className="grid list-none grid-cols-1 gap-[4.8rem] md:grid-cols-2">
             {pizzas.map((pizza) => (
               <Pizza key={pizza.id} pizzaObj={pizza} />
             ))}

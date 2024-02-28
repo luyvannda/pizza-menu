@@ -5,7 +5,7 @@ import Menu from "./components/Menu";
 
 function App() {
   return (
-    <div className="mx-auto flex max-w-[80rem] flex-col items-center gap-[4.8rem]">
+    <div className="flex flex-col items-center justify-center gap-12 overflow-x-hidden">
       <Header />
       <Menu />
       <Footer />
