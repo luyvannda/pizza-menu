@@ -14,8 +14,8 @@ body {
 
 @layer base {
   body {
-    @apply min-h-screen w-screen  border-b-[1.6rem] border-[#edc84b] bg-[#f7f2e9] p-[3.2rem] pb-[6rem]
-    font-mono font-normal text-[#252525];
+    @apply min-h-screen w-screen  overflow-x-hidden border-b-[1.6rem] border-[#edc84b] bg-[#f7f2e9] p-[3.2rem]
+    pb-[6rem] font-mono font-normal text-[#252525];
   }
 }
 

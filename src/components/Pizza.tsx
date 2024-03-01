@@ -19,7 +19,7 @@ const Pizza: FC<PizzaProps> = ({
       className={`flex flex-col gap-[3.2rem] md:flex-row md:items-center ${soldOut && "text-[#888]"}`}
     >
       <img
-        className={`mx-auto h-[200px] w-[240px]
+        className={`h-[200px] w-[240px]
          rounded-lg object-cover object-center md:h-48 md:w-48 md:self-center ${soldOut && "opacity-80 grayscale"}`}
         src={photoName}
         alt={name}
