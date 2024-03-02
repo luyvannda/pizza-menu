@@ -7,7 +7,7 @@ export default function Menu() {
   // const pizzas = [];
   const numPizzas = pizzas.length;
   return (
-    <main className="flex flex-col items-center gap-16 overflow-x-hidden">
+    <main className="flex flex-col items-center justify-center gap-16 overflow-x-hidden">
       <h2 className="inline-block border-b-2 border-t-2 border-[#252525] py-4 text-[2.4rem] font-medium uppercase tracking-[3px]">
         Our Menu
       </h2>

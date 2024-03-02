@@ -16,7 +16,7 @@ const Pizza: FC<PizzaProps> = ({
   return (
     <li
       key={id}
-      className={`flex flex-col gap-[3.2rem] md:flex-row md:items-center ${soldOut && "text-[#888]"}`}
+      className={`flex flex-col items-center gap-[3.2rem] md:flex-row ${soldOut && "text-[#888]"}`}
     >
       <img
         className={`h-[200px] w-[240px]
